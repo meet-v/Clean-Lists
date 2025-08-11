@@ -1,0 +1,15 @@
+{
+  "name": "clean-lists",
+  "version": "1.0.0",
+  "description": "Obsidian plugin to remove unwanted lines between list items.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "node esbuild.config.mjs production"
+  },
+  "devDependencies": {
+    "esbuild": "^0.21.0",
+    "obsidian": "^1.6.0",
+    "typescript": "^5.4.0"
+  }
+}

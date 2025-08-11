@@ -1,0 +1,10 @@
+{
+  "id": "clean-lists",
+  "name": "Clean Lists",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Removes blank lines between list items with a toggle to control strict in-list-only removal.",
+  "author": "Meet Vekaria",
+  "authorUrl": "https://github.com/meet-v/",
+  "isDesktopOnly": false
+}
