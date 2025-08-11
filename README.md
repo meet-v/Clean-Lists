@@ -128,18 +128,18 @@ Apache 2.0
 
 ## NOTICE
 Clean Lists
-Copyright (c) 2025 Meet Vekaria
+Copyright (c) 2025 MEET VEKARIA
 
 This product includes software and documentation licensed under the Apache License, Version 2.0.
 
 You may obtain a copy of the License at:
 http://www.apache.org/licenses/LICENSE-2.0
 
-Required attribution
-- “Clean Lists” by Meet Vekaria.
+Required attribution:
+- “Clean Lists” by [MEET VEKARIA](https://github.com/meet-v/).
 - Please retain this NOTICE file in redistributions, and display attribution in documentation or “About/credits” screens where third‑party notices normally appear.
 
-Additional notices
+Additional notices:
 - Portions may include third‑party components; see their respective licenses in the distribution (if any).
 - The contents of this NOTICE file are for informational purposes only and do not modify the License.
 
