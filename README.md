@@ -101,15 +101,6 @@ Output (strict mode ON):
 
 > (NOTE: Not available in community plugins as of now. The process is in progress.)
 
-BRAT (for testers)
-Use the BRAT plugin to add this repository and install directly from the main branch.
-
-Publishing (for maintainers)
-Bump version in manifest.json and versions.json.
-Build to ensure main.js, manifest.json, and (optional) styles.css are at the repo root.
-Create a GitHub Release with tag matching the version and attach main.js, manifest.json, and styles.css.
-Submit a PR to the obsidian-releases repository adding your plugin entry.
-
 ## Usage
 
 - Open the Command Palette and run “Remove blank lines between list items.”
