@@ -30,7 +30,7 @@ Remove trailing blanks after the last list item, including at end of document.
 
 ## Example
 
-Input (strict mode ON):
+Input:
 
 ```
 - List 1 Item 1
@@ -79,6 +79,29 @@ Output (strict mode ON):
 - List 2 Item 5
 - List 2 Item 6
 
+- List 3 Item 1
+- List 3 Item 2
+- List 3 Item 3
+- List 3 Item 4
+- List 3 Item 5
+- List 3 Item 6
+```
+
+Output (strict mode OFF):
+
+```
+- List 1 Item 1
+- List 1 Item 2
+- List 1 Item 3
+- List 1 Item 4
+- List 1 Item 5
+- List 1 Item 6
+- List 2 Item 1
+- List 2 Item 2
+- List 2 Item 3
+- List 2 Item 4
+- List 2 Item 5
+- List 2 Item 6
 - List 3 Item 1
 - List 3 Item 2
 - List 3 Item 3
