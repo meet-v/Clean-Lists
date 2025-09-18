@@ -137,10 +137,8 @@ Output (strict mode OFF):
 Uses only the public Obsidian plugin API and browser-safe code.
 Works on desktop and mobile.
 
-## LICENSE
-Apache 2.0
+## LICENSE & NOTICE
 
-## NOTICE
 Clean Lists
 Copyright (c) 2025 MEET VEKARIA
 
