@@ -207,7 +207,7 @@ class RemoveListBlankLinesSettingTab extends PluginSettingTab {
   display(): void {
     const { containerEl } = this;
     containerEl.empty();
-    containerEl.createEl("h2", { text: "Remove List Blank Lines" });
+    containerEl.createEl("h2", { text: "Method of Cleaning" });
 
     new Setting(containerEl)
       .setName("Strict in-list only")
@@ -224,3 +224,4 @@ class RemoveListBlankLinesSettingTab extends PluginSettingTab {
       });
   }
 }
+
