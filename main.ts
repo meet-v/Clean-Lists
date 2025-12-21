@@ -160,7 +160,7 @@ function removeBlankLinesBetweenListItems(text: string, strictInListOnly: boolea
 }
 
 export default class RemoveListBlankLinesPlugin extends Plugin {
-  settings: RemoveListBlankLinesSettings;
+  settings: RemoveListBlankLinesSettings = DEFAULT_SETTINGS;
 
   async onload() {
     await this.loadSettings();
@@ -168,7 +168,9 @@ export default class RemoveListBlankLinesPlugin extends Plugin {
     this.addCommand({
       id: "remove-blank-lines-between-list-items",
       name: "Remove blank lines between list items",
-      editorCallback: (editor: Editor, _view: MarkdownView) => {
+      editorCallback: (editor: Editor, ctx) => {
+        if (!(ctx instanceof MarkdownView)) return;
+        const view = ctx;
         const doc = editor.getValue();
         const cleaned = removeBlankLinesBetweenListItems(doc, this.settings.strictInListOnly);
         if (doc !== cleaned) {
@@ -206,8 +208,12 @@ class RemoveListBlankLinesSettingTab extends PluginSettingTab {
 
   display(): void {
     const { containerEl } = this;
+
     containerEl.empty();
-    containerEl.createEl("h2", { text: "Method of Cleaning" });
+    
+    new Setting(containerEl)
+      .setName("Cleaning Options")
+      .setHeading();
 
     new Setting(containerEl)
       .setName("Strict in-list only")

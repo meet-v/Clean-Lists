@@ -8,7 +8,7 @@
     "build": "node esbuild.config.mjs production"
   },
   "devDependencies": {
-    "esbuild": "^0.21.0",
+    "esbuild": "^0.27.2",
     "obsidian": "^1.6.0",
     "typescript": "^5.4.0"
   }
