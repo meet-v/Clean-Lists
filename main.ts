@@ -212,11 +212,11 @@ class RemoveListBlankLinesSettingTab extends PluginSettingTab {
     containerEl.empty();
     
     new Setting(containerEl)
-      .setName("Cleaning Options")
+      .setName("Cleaning options")
       .setHeading();
 
     new Setting(containerEl)
-      .setName("Strict In-List Only")
+      .setName("Strict in-list only")
       .setDesc(
         "If enabled, remove only indented blank lines between list items; keep a single pure empty line to separate lists. Also remove trailing indented blanks after a list; at end-of-file no trailing blank line is kept. If disabled, remove all blanks between list items and trailing after lists."
       )
@@ -230,4 +230,5 @@ class RemoveListBlankLinesSettingTab extends PluginSettingTab {
       });
   }
 }
+
 
