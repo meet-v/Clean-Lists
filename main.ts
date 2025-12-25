@@ -170,7 +170,6 @@ export default class RemoveListBlankLinesPlugin extends Plugin {
       name: "Remove blank lines between list items",
       editorCallback: (editor: Editor, ctx) => {
         if (!(ctx instanceof MarkdownView)) return;
-        const view = ctx;
         const doc = editor.getValue();
         const cleaned = removeBlankLinesBetweenListItems(doc, this.settings.strictInListOnly);
         if (doc !== cleaned) {
@@ -230,5 +229,6 @@ class RemoveListBlankLinesSettingTab extends PluginSettingTab {
       });
   }
 }
+
 
 
