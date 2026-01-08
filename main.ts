@@ -211,7 +211,7 @@ class RemoveListBlankLinesSettingTab extends PluginSettingTab {
     containerEl.empty();
     
     new Setting(containerEl)
-      .setName("Cleaning options")
+      .setName("Cleaning method")
       .setHeading();
 
     new Setting(containerEl)
