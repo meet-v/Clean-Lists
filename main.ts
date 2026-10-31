@@ -1,4 +1,4 @@
-import { App, Editor, MarkdownView, Notice, Plugin, PluginSettingTab, Setting } from "obsidian";
+import { App, Editor, MarkdownView, Notice, Plugin, PluginSettingTab} from "obsidian";
 
 interface RemoveListBlankLinesSettings {
   strictInListOnly: boolean;
@@ -189,13 +189,19 @@ export default class RemoveListBlankLinesPlugin extends Plugin {
   onunload() {}
 
   async loadSettings() {
-    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+      const data = await this.loadData() as Partial<typeof DEFAULT_SETTINGS>;
+
+      this.settings = {
+          ...DEFAULT_SETTINGS,
+          ...data,
+      };
   }
 
   async saveSettings() {
     await this.saveData(this.settings);
   }
 }
+
 
 class RemoveListBlankLinesSettingTab extends PluginSettingTab {
   plugin: RemoveListBlankLinesPlugin;
@@ -206,29 +212,19 @@ class RemoveListBlankLinesSettingTab extends PluginSettingTab {
   }
 
   display(): void {
-    const { containerEl } = this;
+    // Settings are rendered through getSettingDefinitions().
+  }
 
-    containerEl.empty();
-    
-    new Setting(containerEl)
-      .setName("Cleaning method")
-      .setHeading();
-
-    new Setting(containerEl)
-      .setName("Strict in-list only")
-      .setDesc(
-        "If enabled, remove only indented blank lines between list items; keep a single pure empty line to separate lists. Also remove trailing indented blanks after a list; at end-of-file no trailing blank line is kept. If disabled, remove all blanks between list items and trailing after lists."
-      )
-      .addToggle((toggle) => {
-        toggle
-          .setValue(this.plugin.settings.strictInListOnly)
-          .onChange(async (value) => {
-            this.plugin.settings.strictInListOnly = value;
-            await this.plugin.saveSettings();
-          });
-      });
+  getSettingDefinitions() {
+    return [
+      {
+        name: "Strict in-list only",
+        desc: "If enabled, remove only indented blank lines between list items; keep a single pure empty line to separate lists. Also remove trailing indented blanks after a list; at end-of-file no trailing blank line is kept. If disabled, remove all blanks between list items and trailing after lists.",
+        control: {
+          type: "toggle",
+          key: "strictInListOnly",
+        },
+      },
+    ];
   }
 }
-
-
-
