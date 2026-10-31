@@ -1,4 +1,4 @@
-import { App, Editor, MarkdownView, Notice, Plugin, PluginSettingTab} from "obsidian";
+import { App, Editor, MarkdownView, Notice, Plugin, PluginSettingTab, SettingDefinitionItem} from "obsidian";
 
 interface RemoveListBlankLinesSettings {
   strictInListOnly: boolean;
@@ -211,11 +211,7 @@ class RemoveListBlankLinesSettingTab extends PluginSettingTab {
     this.plugin = plugin;
   }
 
-  display(): void {
-    // Settings are rendered through getSettingDefinitions().
-  }
-
-  getSettingDefinitions() {
+  getSettingDefinitions(): SettingDefinitionItem[] {
     return [
       {
         name: "Strict in-list only",
