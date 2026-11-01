@@ -159,4 +159,13 @@ Additional notices:
 If you find issues or have feature requests, open an issue in the repository.
 
 ## CREDITS
-Created by Meet Vekaria.
+
+Created with ❤️ [**Meet Vekaria**](https://github.com/meet-v/).
+
+If you found this useful, I invite you to:
+
+Buy Me a Coffee:
+"https://buymeacoffee.com/meet.v",
+
+Be a GitHub Sponsor:
+"https://github.com/sponsors/meet-v"
